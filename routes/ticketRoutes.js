@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const { createTicket, getTickets, getTicketById, updateTicket, updateTicketStatus, assignTicket, getDashboardStats } = require("../controller/ticketController");
-const { authMiddleware, allowedTo } = require("../Middleware/authMiddleware");
+const { authMiddleware, allowedTo } = require("../middleware/authMiddleware");
 
 router.get("/tickets/stats", authMiddleware, allowedTo("admin"), getDashboardStats);
 router.post("/tickets", authMiddleware, createTicket);
