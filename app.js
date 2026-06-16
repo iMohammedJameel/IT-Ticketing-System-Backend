@@ -33,7 +33,7 @@ app.use("/api", commentRoutes);
 
 dbConnection();
 
-const errorMiddleware = require("./Middleware/errorMiddleware");
+const errorMiddleware = require("./middleware/errorMiddleware");
 
 app.use(errorMiddleware);
 // Run Server
