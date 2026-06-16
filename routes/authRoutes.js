@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { register, login, logout, changePassword, updateProfileImage, getAllUsers, toggleUserStatus, deleteUser } = require("../controller/authController");
 const { verifyPassword } = require("../controller/verifyController");
-const { authMiddleware } = require("../Middleware/authMiddleware");
+const { authMiddleware } = require("../middleware/authMiddleware");
 
 router.post("/auth/register", register);
 router.post("/auth/login", login);
